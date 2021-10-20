@@ -1,0 +1,60 @@
+<%- include ../partials/header.ejs %>
+    <%- include ../partials/main_nav.ejs %>
+
+        <main class="container py-4 px-5">
+            <!-- Message Area-->
+            <%if(messages.length>0) {%>
+                <div class="alert alert-danger">
+                    <%= messages %>
+                </div>
+                <% } %>
+                    <div class="row">
+                        <div class="offset-md-4 col-md-4">
+                            <h1 class="text-center text-primary">Please Register</h1>
+                            <form method="POST" autocomplete="off">
+                                <fieldset class="form-group">
+                                    <label for="username">
+                                        Username:
+                                    </label>
+                                    <input type="text" class="form-control" id="username" name="username"
+                                        placeholder="Enter username" required autofocus>
+                                </fieldset>
+
+                                <fieldset class="form-group">
+                                    <label for="password">
+                                        Password:
+                                    </label>
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        placeholder="Enter password" required>
+                                </fieldset>
+
+                                <fieldset class="form-group">
+                                    <label for="email">
+                                        Email:
+                                    </label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Enter email" required>
+                                </fieldset>
+
+                                <fieldset class="form-group">
+                                    <label for="dispalyName">
+                                        Username:
+                                    </label>
+                                    <input type="text" class="form-control" id="dispalyName" name="displayName"
+                                        placeholder="Enter Dispaly Name" required>
+                                </fieldset>
+                                <br>
+
+                                <fieldset class="form-group text-right">
+                                    <input type="submit" class="btn btn-success" value="Register">
+                                    <a href="/" class="btn btn-warning">
+                                        Cancel</a>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+        </main>
+
+
+        <%- include ../partials/bottom_nav.ejs %>
+            <%- include ../partials/footer.ejs %>
